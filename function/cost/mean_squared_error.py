@@ -11,15 +11,15 @@ def compute_cost(x, y, w, b):
     :return: total cost
     """
     # get size of x array
-    n = x.shape[0]
+    m = x.shape[0]
     sum_cost = 0
-    for i in range(n):
+    for i in range(m):
         # get model prediction
         f_wb = w * x[i] + b
         cost = (f_wb - y[i]) ** 2
         sum_cost += cost
 
-    total_cost = (1 / (2 * n)) * sum_cost
+    total_cost = (1 / (2 * m)) * sum_cost
     return total_cost
 
 
